@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mountain Selector</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card-transition {
+            transition: transform 1s, opacity 1s;
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+  
+        .card-transition.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">PageTitle</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Select a Mountain</h1>
+                <select id="mountainSelect" class="form-control" onchange="displayMountainDetails()">
+                    <!-- Options will be added here by JavaScript -->
+                </select>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div id="mountainCard" class="card mb-3" style="display: none;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img id="mountainImg" class="card-img" src="" alt="Mountain Image">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 id="mountainName" class="card-title"></h5>
+                                <p id="mountainElevation"></p>
+                                <p id="mountainEffort"></p>
+                                <p id="mountainDesc"></p>
+                                <p id="mountainCoords"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="mountainData.js"></script>
+    <script src="mountain.js"></script>
+</body>
+</html>
