@@ -35,6 +35,16 @@ function createParkCard(park) {
     cardTitle.className = 'card-title';
     cardTitle.textContent = park.LocationName;
 
+    const cardImg = document.createElement('img');
+    cardImg.src = park.img;
+    cardImg.className = 'card-img-top';
+
+    cardFront.appendChild(cardImg);
+    cardFront.appendChild(cardTitle);
+
+    const cardBack = document.createElement('div');
+    cardBack.className = 'card-body flip-card-back';
+
     const cardText = document.createElement('p');
     cardText.className = 'card-text';
     cardText.innerHTML = `${park.Address}, ${park.City}, ${park.State}, ${park.ZipCode}<br>Phone: ${park.Phone}<br>Fax: ${park.Fax}<br>Coordinates: ${park.Latitude}, ${park.Longitude}`;
@@ -47,9 +57,12 @@ function createParkCard(park) {
         cardText.appendChild(visitButton);
     }
 
-    cardBody.appendChild(cardTitle);
-    cardBody.appendChild(cardText);
-    card.appendChild(cardBody);
+    cardBack.appendChild(cardText);
+
+    cardInner.appendChild(cardFront);
+    cardInner.appendChild(cardBack);
+
+    card.appendChild(cardInner);
 
     return card;
 }
