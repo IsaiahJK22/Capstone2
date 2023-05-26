@@ -25,10 +25,11 @@ nationalParksArray.forEach(park => {
 // Function to create a Bootstrap card for a park
 function createParkCard(park) {
     const card = document.createElement('div');
-    card.className = 'card col-md-4';
+    card.className = 'card col-md-4 my-3 bg-transparent border-0 blur-bg';
+    card.dataset.bg = park.img;
 
     const cardBody = document.createElement('div');
-    cardBody.className = 'card-body';
+    cardBody.className = 'card-body rounded text-white overlay-content';
 
     const cardTitle = document.createElement('h5');
     cardTitle.className = 'card-title';
@@ -36,7 +37,15 @@ function createParkCard(park) {
 
     const cardText = document.createElement('p');
     cardText.className = 'card-text';
-    cardText.textContent = `${park.Address}, ${park.City}, ${park.State}, ${park.ZipCode}`;
+    cardText.innerHTML = `${park.Address}, ${park.City}, ${park.State}, ${park.ZipCode}<br>Phone: ${park.Phone}<br>Fax: ${park.Fax}<br>Coordinates: ${park.Latitude}, ${park.Longitude}`;
+
+    if (park.Visit) {
+        const visitButton = document.createElement('a');
+        visitButton.href = park.Visit;
+        visitButton.className = 'btn btn-light mt-2';
+        visitButton.textContent = 'Visit';
+        cardText.appendChild(visitButton);
+    }
 
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(cardText);
@@ -44,6 +53,7 @@ function createParkCard(park) {
 
     return card;
 }
+
 
 // Function to filter parks by location and type
 function filterParks() {

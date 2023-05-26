@@ -9,41 +9,37 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">PageTitle</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                      data-bs-toggle="dropdown" aria-expanded="false">
-                      Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li>
-                          <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-              </li>
-          </ul>
-      </div>
-  </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Odyssey</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/Home Page/index.html">Home</a>
+            </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/mountain-info.html"><i class="fas fa-mountain"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/national-parks.html"><i class="fas fa-tree"></i></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+    </div>
+</nav>
 
   <main>
     <div class="vignette hide"></div>
@@ -95,22 +91,26 @@
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <div class="card h-100">
+                <div class="card h-100 d-flex flex-column">
                     <img src="images/NationalPark.jpg" class="card-img-top" alt="National Parks">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">National Parks</h5>
                         <p class="card-text">Discover stunning national parks and their natural wonders.</p>
-                        <a href="national-parks.html" class="btn btn-primary">Explore</a>
+                        <div class="mt-auto d-flex justify-content-center">
+                            <a href="/national-parks.html" class="btn btn-primary">Explore</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="carousel-item">
-                <div class="card h-100">
+                <div class="card h-100 d-flex flex-column">
                     <img src="images/MountainExploration.jpg" class="card-img-top" alt="Mountain Information">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">Mountain Information</h5>
                         <p class="card-text">Get detailed information about various mountains and their trails.</p>
-                        <a href="mountain-info.html" class="btn btn-primary">Explore</a>
+                        <div class="mt-auto d-flex justify-content-center">
+                            <a href="/mountain-info.html" class="btn btn-primary">Explore</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-  </div>
+</div>
 
   <footer class="footer mt-auto py-3 bg-light sticky-footer">
         <div class="container-fluid text-center">
