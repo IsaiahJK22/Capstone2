@@ -8,7 +8,7 @@ body {
 }
 
 #mountainCard {
-    background: rgba(255,255,255,0.001); /* set your transparency level */
+    background: rgba(255,255,255,0.001); /* transparency level */
     backdrop-filter: blur(5px); /* Blur effect */
 }
 
